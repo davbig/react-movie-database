@@ -1,8 +1,6 @@
 import "./App.css";
 import MyHeader from "./components/MyHeader";
-import Section from "./components/Section";
 import Welcome from "./components/Welcome";
-import ImageBox from "./components/ImageBox"
 import movies from "./movies";
 import MoviesList from "./components/MoviesList";
 

@@ -13,13 +13,13 @@ const Rating = (props) => {
 
         let star = StarFull;
 
-        if (i == rating && hasHalfStar) {
+        if (i === rating && hasHalfStar) {
             star = StarHalf;    
         } else if (i > rating - 1) {
             star = StarEmpty;
         }
 
-        stars.push(<img key={i} src={star} />)
+        stars.push(<img alt="" key={i} src={star} />)
     }
 
     return ( 

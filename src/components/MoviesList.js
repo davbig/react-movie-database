@@ -2,9 +2,6 @@ import MovieCover from "./MovieCover";
 
 const MoviesList = (props) => {
 
-    const hello = 'Hallo Welt!';
-    const elems = [<p>Hallo</p>, <b>Welt</b>];
-
     const movies = props.movies.map((movie, i) => 
 
         <MovieCover 

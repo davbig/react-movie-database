@@ -2,7 +2,7 @@ import Rating from "./Rating";
 
 const MovieCover = (props) => {
 
-    const { title, year, duration, genre, director, rate } = props;
+    const { title, duration, genre, director, rate } = props;
 
     return ( 
         <div className="movie-cover">
