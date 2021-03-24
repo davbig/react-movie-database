@@ -54,12 +54,20 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .movie-flex > * {
+  color: #fff;
   width: 20%;
-  padding: 40px;
-  border: 1px solid blue;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #062e2b;
+  margin: 10px;
+  -webkit-box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d, 0 -6px 16px -6px #00000008;
+          box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d, 0 -6px 16px -6px #00000008;
 }
 
 .movie-flex .rating {

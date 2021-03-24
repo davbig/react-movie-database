@@ -43,11 +43,17 @@ section {
 .movie-flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   > * {
+    color: #fff;
     width: 20%;
-    padding: 40px;
-    border: 1px solid blue;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(6, 46, 43);
+    margin: 10px;
+    box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
+    0 -6px 16px -6px #00000008;
   }
 
   .rating {
