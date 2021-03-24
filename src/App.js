@@ -3,6 +3,8 @@ import MyHeader from "./components/MyHeader";
 import Section from "./components/Section";
 import Welcome from "./components/Welcome";
 import ImageBox from "./components/ImageBox"
+import movies from "./movies";
+import MoviesList from "./components/MoviesList";
 
 function App() {
 
@@ -10,17 +12,12 @@ function App() {
     console.log('Hello World');
   }
 
-
   return (
     <div className="App">
       <MyHeader />
       <Welcome name={'Super-Code'} age={24} />
 
-      <Section center={true} reverse={true}>
-        <ImageBox imageSize={'300'} />
-        <ImageBox content={'SPECIAL CAPTION'} />
-        <ImageBox />
-      </Section>
+      <MoviesList movies={movies} />
 
       <button onClick={log}>Click me!</button>
     </div>

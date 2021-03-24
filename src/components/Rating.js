@@ -2,11 +2,9 @@ import StarFull from './assets/star_full.svg'
 import StarHalf from './assets/star_half.svg'
 import StarEmpty from './assets/star_empty.svg'
 
-
 const Rating = (props) => {
 
-    // comment
-
+    const hasHalfStar = (props.rating % 1 !== 0);
     const rating = parseInt(props.rating);
     
     const stars = [];
@@ -15,7 +13,9 @@ const Rating = (props) => {
 
         let star = StarFull;
 
-        if (i > rating - 1) {
+        if (i == rating && hasHalfStar) {
+            star = StarHalf;    
+        } else if (i > rating - 1) {
             star = StarEmpty;
         }
 
@@ -23,7 +23,6 @@ const Rating = (props) => {
     }
 
     return ( 
-
         <div className="rating">
             { stars.map(item => item )}
         </div>

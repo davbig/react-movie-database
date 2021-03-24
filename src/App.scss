@@ -39,3 +39,23 @@ section {
   margin-top: 25px;
   display: flex;
 }
+
+.movie-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    width: 20%;
+    padding: 40px;
+    border: 1px solid blue;
+  }
+
+  .rating {
+    display: flex;
+    > * {
+      width: 20px;
+      height: 20px;
+      margin: 2px;
+    }
+  }
+}

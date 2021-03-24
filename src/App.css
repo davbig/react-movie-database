@@ -47,4 +47,30 @@ section {
   display: -ms-flexbox;
   display: flex;
 }
+
+.movie-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movie-flex > * {
+  width: 20%;
+  padding: 40px;
+  border: 1px solid blue;
+}
+
+.movie-flex .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.movie-flex .rating > * {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+}
 /*# sourceMappingURL=App.css.map */
