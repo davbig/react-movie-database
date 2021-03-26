@@ -81,4 +81,56 @@ section {
   height: 20px;
   margin: 2px;
 }
+
+.filter-bar {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f9e3a3;
+  margin-bottom: 30px;
+}
+
+.filter-bar input, .filter-bar select {
+  margin: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.movie-cover h4 {
+  margin-top: 0;
+}
+
+.movie-cover > * {
+  margin-bottom: 4px;
+}
+
+ul.genres {
+  margin: 5px 0 0 0;
+  padding: 0 0 0 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul.genres > li {
+  margin-right: 8px;
+  font-size: 11px;
+}
 /*# sourceMappingURL=App.css.map */

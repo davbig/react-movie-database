@@ -10,10 +10,8 @@ const MovieCover = (props) => {
             <div>{ year }</div>
             <div>{ duration }</div>
             <div>{ director }</div>
-
             <Rating rating={rate} />
-
-            <div>{ genre.map(item => item) }</div>
+            <ul className="genres">{ genre.map((item, index) => <li key={index}>{item}</li>) }</ul>
         </div>
     );
 }
