@@ -34,13 +34,20 @@ class App extends React.Component {
     })
   }
 
+  randomMovie() {
+    this.setState({
+      moviesList: [movies[Math.floor(Math.random()*movies.length)-1]]
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <MyHeader title={'Movie Database'} />
+        <MyHeader title={'Movie Database nicht von Bebi'} />
+        <button onClick={e => this.random(e)}>Random</button>
         <FilterBar orderMovies={e => this.orderMovies(e)} searchByTitle={e => this.searchByTitle(e)} />
         <MoviesList movies={this.state.moviesList} />
-        { !this.state.moviesList.length && <p className="no-results">Leider keine Filme gefunden :(</p> }
+        { this.state.moviesList.length === 0 && <p className="no-results">Leider keine Filme gefunden :(</p> }
       </div>
     );
   }
