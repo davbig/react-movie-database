@@ -1,11 +1,9 @@
 import "./App.css";
 import React from 'react';
 import MyHeader from "./components/MyHeader";
-import Welcome from "./components/Welcome";
 import movies from "./movies";
 import MoviesList from "./components/MoviesList";
 import FilterBar from "./components/FilterBar";
-
 
 class App extends React.Component {
 
@@ -25,20 +23,30 @@ class App extends React.Component {
           moviesList: movies.sort((a, b) => b.year - a.year)
         })
         break;
+      default:
+        break;
     }
   }
 
+  searchByTitle(searchTerm) {
+    this.setState({
+      moviesList: movies.filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    })
+  }
+
   render() {
+
+    const warningClass = this.state.moviesList.length == 0 ? 'warning' : '';
+
     return (
       <div className="App">
         <MyHeader />
-        <FilterBar orderMovies={e => this.orderMovies(e)} />
-        <Welcome name={'Super-Code'} age={24} />
-        <MoviesList movies={this.state.moviesList} />
+        <FilterBar orderMovies={e => this.orderMovies(e)} searchByTitle={e => this.searchByTitle(e) } />
+        <div className={ warningClass }>Gesamt: { this.state.moviesList.length }</div>
+        { (this.state.moviesList.length > 0) ? <MoviesList movies={this.state.moviesList} /> : <h2>Leide keine Treffer! :(</h2> }
       </div>
     );
   }
-
 }
 
 export default App;

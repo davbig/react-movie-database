@@ -81,4 +81,9 @@ section {
   height: 20px;
   margin: 2px;
 }
+
+.warning {
+  color: red;
+  font-weight: bold;
+}
 /*# sourceMappingURL=App.css.map */
